@@ -1,4 +1,5 @@
 **OTP base Email verification**
+
 Every time we register on a new app, we automatically receive a welcome message with our name on it.
 So, this a walkthrough to, it in here i've automate email sending with OTP verification!
 
