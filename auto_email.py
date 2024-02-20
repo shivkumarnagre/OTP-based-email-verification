@@ -21,14 +21,14 @@ def automatic_email(OTP,name,email,pwd):
     try:
         # Create a secure MIME text email
         msg = MIMEText(message, 'plain')
-        msg['Subject'] = "TheWorld OTP Verification"
-        msg['From'] = "shivkumar.nagre.cs@ghrcem.raisoni.net" 
+        msg['Subject'] = "OTP Verification"
+        msg['From'] = "your_email address" 
         msg['To'] = email
         # Connect to SMTP server with secure TLS
         server = smtplib.SMTP('smtp.gmail.com',587)
         server.starttls()
-        server.login("shivkumar.nagre.cs@ghrcem.raisoni.net", pwd)  
-        server.sendmail('shivkumar.nagre.cs@ghrcem.raisoni.net',email,msg.as_string())
+        server.login("your_email address", pwd)  
+        server.sendmail('your_email address',email,msg.as_string())
         server.quit()
         print("Varification email sent successfully!")
 
