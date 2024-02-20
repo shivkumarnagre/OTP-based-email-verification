@@ -11,13 +11,12 @@ def otp_generator():
         OTP+=digits[math.floor(random.random()*10)]
     return OTP
 
+
 def automatic_email(OTP,name,email,pwd):
+    #user = input("Enter your name : ")
+    #email = input("Enter your Email : ")
+    #pwd = input("Enter your Gmail password : ")
     message = (f"Dear {name}, welcome to TheWorld! Your OTP is {OTP}")
-    '''
-    passkey = read_pass()
-    if pwd == "pass" :
-        pwd = passkey
-    '''
     try:
         # Create a secure MIME text email
         msg = MIMEText(message, 'plain')
@@ -81,11 +80,6 @@ def gui_window():
     verify_otp_btn.pack()
    
     root.mainloop()
-
-def read_pass():
-    with open("Encryption_key.txt", "r") as f:
-        pass_key = f.read()
-    return pass_key
 
 gui_window()
 
